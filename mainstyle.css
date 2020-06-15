@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap'); /*-header font-*/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+body {
+    background-color: #ebf2fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image {
+    border-radius: 80%;
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+  
+  .overlay {
+    border-radius:80%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(108, 122, 202);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+.bio {
+    display: block;
+    float: left;
+    width: 30%;
+    text-align: left;
+    padding: 10px;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.bio a {
+    background-color:#e5e5e5;
+    padding:8px;
+    margin-top:7px;
+    display:block;
+    width:100%;
+    color:black;
+  }
+
+.main {
+    display: block;
+    float:left;
+    width:70%;
+    padding: 5px;
+    overflow: auto;
+}
+
+.button {
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Asap', sans-serif;
+  font-size: 16;
+  padding: 15px 40px;
+  border-radius: 4px;
+  color: rgb(98, 118, 182)77);
+}
+
+.glow-button:hover {
+    color: rgb(12, 0, 0);
+    box-shadow: 0px 5px 15px rgba(100, 107, 170, 0.4);
+   }
+
+title {
+    font-family: 'Architects Daughter', sans-serif;
+    display: inline;
+    padding: 10px;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Architects Daughter', sans-serif;
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Asap', sans-serif;
+    display: block;
+    margin: 0;
+}
+
+p {
+    font-family: 'Asap', sans-serif;
+    display: block;
+    text-align: center;
+}
+
+li {
+    font-family: 'Asap', sans-serif;
+    display: block;
+}
+
+h4 {
+    display: block;
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .bio, .main{
+      width:100%;
+    }
+}
