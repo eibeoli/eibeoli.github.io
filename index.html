@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 
+<!--
+    TODO
+    - Center+scale profile/text description 
+    - Fix links (done-ish)
+    - Fix buttons 
+    - Scale overlay text (done?)
+-->
+
+
 <head>
     <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <meta charset="UTF-8">
@@ -12,16 +21,23 @@
 </head>
 
 <body>
+    
     <div class="navbar">
         <div class="name">eibeoli</div>
         <a href="/">About</a>
         <a href="/img/resume.pdf">Resume</a>
+        <div class="dropdown">
+            <span>Credit</span>
+            <div class="dropdown-content">
+            <p>Profile picture by @bbymazz<br>Site Buttons by fontawesome<br>HTML/CSS by me</p>
+            </div>
+          </div>
     </div>
 
     <div class="container">
         <img src="img/image.png" class="portrait">
         <div class="intro">
-            <div class="title">Nice to meet you.</div>
+            <div class="title">Nice to meet you!</div>
             <p>I'm an Information Technology student with a focus on software programming.</p>
             <a class="button" href="https://github.com/eibeoli"><i class="fab fa-github fa-2x"></i></a>
             <a class="button" href="mailto:bdahir2@gmu.edu"><i class="fas fa-envelope-square fa-2x"></i></a>
@@ -32,7 +48,16 @@
 
 
     <!--Projects-->
-    
+    <div class="row">
+        <div class="column">
+            <div class="container2">
+            <img src="img/brand.gif" class="gif" >
+            <a href="https://github.com/eibeoli/brand-availability">
+                <div class="overlay"><div id="overlaytext"><h2>Brand Checker</h2><br><i>Made in Python, Flask</i></div></div>
+            </a>
+        </div>
+        </div>
+    </div>
 </body>
 
 </html>
