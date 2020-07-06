@@ -69,7 +69,6 @@ body {
 }
 
 .portrait {
-    display: block;
     float: left;
     width: 50%;
   }
@@ -169,6 +168,8 @@ p {
 
     .intro {
         width: 100%;
+        display: block;
+        padding: 0;
     }
 
     .column {
