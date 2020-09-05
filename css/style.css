@@ -99,12 +99,13 @@ p {
 .container2 { /**holds projects and overlay**/
     position: relative;
     width: 100%;
+    height: 100%;
   }
 
 .gif {
     width: 100%;
+    height: 336px;
     display: block;
-    height: auto;
 }
 
 .overlay {
@@ -150,7 +151,7 @@ p {
 }
 
 @media only screen and (max-width:620px) {
-    /* For mobile phones: */
+    /* mobile/smaller window view: */
     .container {
         flex-direction: column;
         left: 0;
