@@ -8,7 +8,7 @@ body {
 
 .navbar {
     overflow: hidden;
-    padding: 2px 5%;
+    padding: 0px 5%;
     background-color: rgb(176, 195, 216);
     font-family: 'Open Sans', sans-serif;
   }
@@ -20,6 +20,13 @@ body {
     font-size: 16px;
     padding: 14px 17px;
     text-decoration: none;
+  }
+
+  .bottomnavbar {
+    overflow: hidden;
+    padding: 0px 5%;
+    background-color: rgb(176, 195, 216);
+    font-family: 'Open Sans', sans-serif;
   }
 
   .name {
@@ -139,11 +146,14 @@ p {
     opacity: .75;
   }
   
-.column {
+.column1 {
     float: left;
     width: 50%;
 }
 
+.column2 {
+    width: 100%;
+}
 .row:after {
     content: "";
     display: table;
@@ -173,7 +183,7 @@ p {
         padding: 0;
     }
 
-    .column {
+    .column1 {
         width: 100%;
       }
       
