@@ -16,11 +16,20 @@ body {
 }
 
 .row {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 12px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Optional: spacing between items */
 }
+
+.row > * {
+  flex: 0 0 calc(50% - 6px); /* Two per row with some spacing */
+  box-sizing: border-box;
+}
+
 
 
 /** NAVIGATION **/
@@ -93,17 +102,8 @@ h1 {
 /**ABOUT**/
 
 .container {
-  padding: 50px 0;
+  padding: 4px 0;
 }
-
-
-.row {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
 
 #about-me {
   min-height: 100vh;
@@ -200,7 +200,7 @@ section {
 
 .project {
    
-    margin-bottom: 100px;
+    margin-bottom: 5%;
   }
 
   .project__img {
@@ -244,7 +244,6 @@ section {
 
   }
 
-
   .project__list {
     padding-top: 40px;
   }
@@ -274,7 +273,6 @@ section {
     text-decoration: none;
   }
 
-
   .project__description--title,
   .project__description--sub-title,
   .project__description--para,
@@ -300,3 +298,21 @@ footer {
     justify-content: center;
     padding: 8% 0;
 }
+    
+    @media only screen and (max-width:700px) {
+      /* mobile/smaller window view: */
+      .row {
+          flex-direction: column;
+          left: 0;
+          right: 0;
+      }
+
+      .project__description--sub-title, 
+      .project__description--para, 
+      .project__description--links {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        margin: 0.5px;;
+      }
+
+        /*todo: fix minor aesthetics later*/
+    }
