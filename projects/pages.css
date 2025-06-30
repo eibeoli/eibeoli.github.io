@@ -1,0 +1,268 @@
+/** HEADER **/
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+
+}
+
+.nav__link--list {
+  display: flex;
+
+}
+
+.nav__link--anchor {
+  margin: 0 12px;
+  color: #242424;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 5px 0;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: -3px;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: #f7efef;
+}
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.name {
+  font-size: 24px;
+  color: #091975;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 4px 0;
+}
+
+#about-me {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me__info--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-me__info--title {
+  margin-bottom: 10px;
+  animation: fade-up 650ms 400ms backwards;
+}
+
+.title {
+  font-family: 'Rock Salt';
+  font-size: 26px;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-me__info--para {
+  font-size: 20px;
+  margin-bottom: 20px;
+  animation: fade-up 650ms 600ms backwards;
+
+}
+
+.about-me_link {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 0 16px;
+ 
+}
+
+.about-me_links {
+animation: fade-up 650ms 800ms backwards;
+}
+
+.about-me__img--container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.about-me__img {
+  width: 100%;
+  animation: fade-in 1200ms 800ms backwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/** BODY **/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "visual"
+    "content";
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+  background-color: #54a9ee;
+  padding: 5px;
+}
+
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  grid-area: content;
+}
+
+con {
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+
+}
+
+.con--list {
+  display: flex;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.grid-container > div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(253, 252, 253, 0.8);
+  padding: 20px 0;
+}
+
+.grid-image {
+  width: 100%;
+  max-width: 700px; /* or whatever fits */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid-text {
+  margin-top: 5px; /* Optional spacing between stacked texts */
+  font-size: 1rem; /* Optional: for better scaling */
+}
+
+.title {
+  grid-column: 1 / span 2;
+}
+
+
+/** FOOTER **/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    @media only screen and (max-width:700px) {
+      /* mobile/smaller window view: */
+      .grid-container {
+        display: grid;
+          grid-template-columns: auto;
+          left: 0;
+          right: 0;
+      }
+
+      .grid-container > div {
+        background-color: rgba(253, 252, 253, 0.8);
+        padding: 20px 0;
+      }
+
+      .project__description--sub-title, 
+      .project__description--para, 
+      .project__description--links {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        margin: 0.5px;;
+      }
+    }
